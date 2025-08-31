@@ -100,29 +100,35 @@ SMTP_USER="your_smtp_username"
 SMTP_PASS="your_smtp_password"
 SENDER_EMAIL="your_email@example.com"
 ```
-## 🔑 How to Generate .env Values
-1. MONGODB_URI
-Go to MongoDB Atlas and create a free cluster.
+### 🔑 How to Generate `.env` Values
 
-Navigate to Database → Connect → Connect your application.
+#### 1. `MONGODB_URI`
+- Go to [MongoDB Atlas](https://www.mongodb.com/atlas/database) and **create a free cluster**.
+- Navigate to:  
+  **Database → Connect → Connect your application**  
+- Copy the connection string and replace `<username>` and `<password>` with your database credentials.
 
-Copy the connection string and replace <username> and <password> with your database credentials.
+---
 
-2. JWT_SECRET
-Generate a random, secure string using a tool like randomkeygen.com.
+#### 2. `JWT_SECRET`
+- Generate a random, secure string using [randomkeygen.com](https://randomkeygen.com) or any password generator.  
+- Example: `hsd82h3h2g3jsdf8723@##1`
 
-3. SMTP_USER / SMTP_PASS
-Go to Brevo (Sendinblue) and create a free account.
+---
 
-Navigate to SMTP & API → SMTP → Generate New Credentials.
+#### 3. `SMTP_USER` / `SMTP_PASS`
+- Go to [Brevo (Sendinblue)](https://www.brevo.com/) and **create a free account**.  
+- Navigate to:  
+  **SMTP & API → SMTP → Generate New Credentials**  
+- Copy your **SMTP User** and **SMTP Password** into the `.env` file.
 
-Copy your SMTP User and SMTP Password into the .env file.
+---
 
-4. SENDER_EMAIL
-The email address you want to send verification/reset links from.
+#### 4. `SENDER_EMAIL`
+- Enter the email address you want to send **verification / reset links** from.  
+- ⚠️ Must be a **verified sender email** in Brevo.
 
-Must be a verified sender email in Brevo.
-
+---
 
 
 Start the development servers:
@@ -142,6 +148,6 @@ npm run dev
 
 Developed with ❤️ by Akshat Sharma
 
-GitHub: @AkshatSharma555
+GitHub: https://github.com/AkshatSharma555
 
 LinkedIn: www.linkedin.com/in/akshat-sharma-6664422b3
